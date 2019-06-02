@@ -2,7 +2,7 @@ package com.hackerrank.algorithms.arrays;
 
 import java.util.PriorityQueue;
 
-public class PriorityQueueTest {
+public class KthSmallest {
 
 	public static void main(String[] args) {
 		PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
@@ -17,15 +17,13 @@ public class PriorityQueueTest {
 	}
 
 	public static int findKthSmallestElement(int[] array, int k) {
-		PriorityQueue<Integer> priorityQueue = new PriorityQueue<Integer>();
+		PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
 		for (int i = 0; i < array.length; i++) {
 			priorityQueue.offer(array[i]);
 		}
-		System.out.println("Final priority-queue " + priorityQueue);
 		int currentNo = 0;
 		while (k > 0) {
 			currentNo = priorityQueue.poll();
-			System.out.println("After Polling"+priorityQueue);
 			k--;
 		}
 		return currentNo;
