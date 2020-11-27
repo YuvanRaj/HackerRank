@@ -32,7 +32,7 @@ public class HackathanSnapDeal {
 	}
 
 	public static int findKthSmallestElement(int[] array, int k) {
-		PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+		PriorityQueue<Integer> priorityQueue = new PriorityQueue<Integer>();
 		for (int i = 0; i < array.length; i++) {
 			priorityQueue.offer(array[i]);
 		}
